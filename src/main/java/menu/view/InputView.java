@@ -14,7 +14,7 @@ public class InputView {
     }
     public List<String> inedibleMenus() {
         String lawInput = Console.readLine();
-        if (lawInput.equals("")) {
+        if (lawInput.isEmpty()) {
             return new ArrayList<>();
         }
         List<String> input = List.of(lawInput.split(","));
