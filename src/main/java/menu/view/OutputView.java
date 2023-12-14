@@ -16,4 +16,12 @@ public class OutputView {
         final String ERROR = "[ERROR] ";
         System.err.println(ERROR + message);
     }
+
+    public void inedibleMenus(String name) {
+        System.out.println(name + "(이)가 못 먹는 메뉴를 입력해 주세요.");
+    }
+
+    public void println() {
+        System.out.println();
+    }
 }
