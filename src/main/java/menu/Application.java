@@ -83,7 +83,7 @@ public class Application {
             return true;
         }
         int lastIndex = categoriesOfWeek.size() - 1;
-        return category != categoriesOfWeek.get(lastIndex - 1) || category != categoriesOfWeek.get(lastIndex - 2);
+        return category != categoriesOfWeek.get(lastIndex) || category != categoriesOfWeek.get(lastIndex - 1);
     }
 
     private static List<String> getInedibleMenus(InputView inputView, OutputView outputView, String name) {

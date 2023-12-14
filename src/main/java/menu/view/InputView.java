@@ -13,7 +13,11 @@ public class InputView {
         return input;
     }
     public List<String> inedibleMenus() {
-        List<String> input = List.of(Console.readLine().split(","));
+        String lawInput = Console.readLine();
+        if (lawInput.equals("")) {
+            return new ArrayList<>();
+        }
+        List<String> input = List.of(lawInput.split(","));
         validationInedibleMenus(input);
         return input;
     }
