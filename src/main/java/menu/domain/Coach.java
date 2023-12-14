@@ -2,6 +2,7 @@ package menu.domain;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Coach {
 
@@ -15,11 +16,24 @@ public class Coach {
         this.inedibleMenus = new ArrayList<>();
     }
 
+    public void setInedibleMenus(List<String> inedibleMenus) {
+        this.inedibleMenus = inedibleMenus;
+    }
+
+    public boolean addMenu(String menu) {
+        if (inedibleMenus.contains(menu) ||
+                (!menus.isEmpty() && menu.equals(menus.get(menus.size() - 1)))) {
+            return false;
+        }
+        menus.add((menu));
+        return true;
+    }
+
     public String getName() {
         return name;
     }
 
-    public void setInedibleMenus(List<String> inedibleMenus) {
-        this.inedibleMenus = inedibleMenus;
+    public List<String> getMenus() {
+        return menus;
     }
 }
